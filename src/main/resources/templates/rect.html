@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <p><input placeholder="ширина" name="a"></p>
+    <p><input placeholder="высота" name="b"></p>
+    <p><button formaction="/sum">вычислить периметр и площадь</button></p>
+</form>
+
+<p> <span th:text="${errorMsg}" /></p>
+<p>
+
+</p>
+</body>
+</html>
