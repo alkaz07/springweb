@@ -8,12 +8,16 @@
 <form>
     <p><input placeholder="ширина" name="a"></p>
     <p><input placeholder="высота" name="b"></p>
-    <p><button formaction="/sum">вычислить периметр и площадь</button></p>
+    <p><button formaction="/rect">вычислить периметр и площадь</button></p>
 </form>
 
 <p> <span th:text="${errorMsg}" /></p>
-<p>
-
+<p th:if="${rectangle}">
+    Площадь посчитана и равна <span th:text="${area}"/> <br>
+    Периметр посчитан и равен <span th:text="${perimeter}"/>
+</p>
+<p th:unless="${rectangle}">
+    Площадь не удалось посчитать. Периметр тоже не удалось посчитать
 </p>
 </body>
 </html>

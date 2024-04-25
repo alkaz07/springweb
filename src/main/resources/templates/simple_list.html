@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+что-то интересное со списком
+<p th:if="${spisok}">
+    список есть! <br>
+    <span th:unless="${spisok.empty}">список заполен строками</span>
+</p>
+
+<p th:each="s : ${spisok}">
+    очередная строка:  <span th:text="${s}"></span>
+</p>
+
+</body>
+</html>
